@@ -68,11 +68,11 @@ class CLT extends Funcionario {
     required super.salario,
   });
 
-  // Base de cálculo	Alíquota	Parcela a deduzir do IR
-  // De R$ 2.112,01 até R$ 2.826,65	7,5%	R$ 158,40
-  // De R$ 2.826,66 até R$ 3.751,05	15%	R$ 370,40
-  // De R$ 3.751,06 até R$ 4.664,68	22,5%	R$ 651,73
-  // Acima de R$ 4.664,68	27,5%	R$ 884,96
+  // Base de cálculo	Alíquota
+  // De R$ 2.112,01 até R$ 2.826,65	 ->  7,5%
+  // De R$ 2.826,66 até R$ 3.751,05  ->	15%
+  // De R$ 3.751,06 até R$ 4.664,68  -> 22,5%
+  // Acima de R$ 4.664,68	           -> 27,5%
   @override
   double calculaSalario() {
     return switch (salario) {

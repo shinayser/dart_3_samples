@@ -5,6 +5,8 @@ class LatLong {
   double long;
 
   LatLong(this.lat, this.long);
+
+  bool get isEnabled => true;
 }
 
 LatLong getLatLongDoJeitoAntigo() {
@@ -17,12 +19,12 @@ LatLong getLatLongDoJeitoAntigo() {
 
 void main() {
   records() {
-    //Destruturar records é mais fácil
+    //Desestruturar records é mais fácil
     final (lat, long) = getLatLongComRecords();
     print('lat: $lat, long: $long');
   }
 
-  classes() {
+  objetos() {
     //Mas da pra destruturar classes também!
     final LatLong(:lat, long: longitude) = getLatLongDoJeitoAntigo();
     print('lat: $lat, long: $longitude');
@@ -37,11 +39,16 @@ void main() {
 
   maps() {
     //E maps
-    final Map<String, dynamic> json = {
+    Map<String, dynamic> json = {
       'nome': 'Daniel',
       'cpf': 123456789,
     };
-    final {'nome': nome, 'cpf': cpf as int} = json;
+
+    final {
+      'nome': nome,
+      'cpf': cpf as int,
+    } = json;
+
     print('É o $nome com cpf $cpf');
   }
 }

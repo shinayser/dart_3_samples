@@ -47,22 +47,21 @@ void main() {
     dynamic figura = Retangulo(2, 3);
 
     switch (figura) {
-      case Retangulo(base: var base, altura: var altura):
+      case Retangulo(:double base, :double altura):
         print('A área do retângulo é ${base * altura}');
         break;
-      case Quadrado(base: var base):
+      case Quadrado(:final base):
         print('A área do quadrado é ${base * base}');
         break;
     }
   }
 
-  objectos();
   validarJson() {
     final remoteConfig = {
       'name': 'enable_cpf_screen',
       'value': true,
       'data': {
-        'date': '10/10/2023',
+        'company': 'ifood',
       }
     };
 
@@ -70,9 +69,11 @@ void main() {
         case {
           'name': String name,
           'value': bool value,
-          'data': {'date': String date}
+          'data': {'company': String company}
         }) {
-      print('É o $name com value $value e a data é $date');
+      print('É o $name com value $value e a company é $company');
+    } else {
+      print('Não deu match no formato');
     }
   }
 }

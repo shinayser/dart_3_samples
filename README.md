@@ -1,2 +1,1 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+Apenas um projeto com alguns exemplso das novas funcionalidades do Dart 3.0
