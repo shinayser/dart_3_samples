@@ -56,6 +56,46 @@ void main() {
     }
   }
 
+  forLoopsMap() {
+    Map<String, int> hist = {
+      'Daniel': 1,
+      'Gracy': 2,
+      'Gabriel': 3,
+      'Gustavo': 4,
+      'Beraldo': 5,
+    };
+
+    for (var MapEntry(:key, :value) in hist.entries) {
+      print('$key occurred $value times');
+    }
+  }
+
+  forLoopsSet() {
+    Set<String> nomes = {
+      'Daniel',
+      'Gracy',
+      'Gabriel',
+      'Gustavo',
+      'Beraldo',
+    };
+
+    for (var nome in nomes) {
+      print(nome);
+    }
+
+    // Set<(String, int)> nomes = {
+    //   ('Daniel', 1),
+    //   ('Gracy', 2),
+    //   ('Gabriel', 3),
+    //   ('Gustavo', 4),
+    //   ('Beraldo', 5),
+    // };
+    //
+    // for (var (nome, valor) in nomes) {
+    //   print('$nome com valor $valor');
+    // }
+  }
+
   validarJson() {
     final remoteConfig = {
       'name': 'enable_cpf_screen',
